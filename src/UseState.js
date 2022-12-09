@@ -1,31 +1,33 @@
 import react, { useState } from "react";
 export default function UseState() {
-  const info = [
-    {
-      id: 1,
-      name: "kumar",
-      age: 31,
-    },
-    {
-      id: 2,
-      name: "tech",
-      age: 26,
-    },
-  ];
-  const [array, setArray] = useState(info);
+  const [obj, setObj] = useState({ id: 1, name: "Kumar", age: 31 });
   const clearArray = () => {
-    setArray([]);
+    setObj({ ...obj, name: "Rana", age: 28 });
   };
   return (
     <>
-      <div>
-        {array.map((e) => {
-          return `Name is ${e.name} and Age is ${e.age} with Id ${e.id} `;
-        })}
-      </div>
-      <button onClick={clearArray}>Clear</button>
+      <div>Name is : {obj.name}</div>
+      <div>Age is : {obj.age}</div>
+      <button onClick={clearArray}>Change Name and Age</button>
     </>
   );
+}
+//   const info = [
+//     {
+//       id: 1,
+//       name: "kumar",
+//       age: 31,
+//     },
+//     {
+//       id: 2,
+//       name: "tech",
+//       age: 26,
+//     },
+//   ];
+{
+  /* {array.map((e) => {
+    return `Name is ${e.name} and Age is ${e.age} with Id ${e.id} `;
+})} */
 }
 //   <h1>useState with Array</h1>
 
