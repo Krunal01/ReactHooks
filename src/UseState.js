@@ -2,7 +2,11 @@ import react, { useState } from "react";
 function UseState() {
   let [name, setName] = useState("useState hook");
   const onClickHandler = () => {
-    setName("useState Hook in React");
+    let val = name;
+    (val == "useState hook") ?
+      setName("useState Hook in React"):
+      setName("useState hook");
+    
   };
   return (
     <>
