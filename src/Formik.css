@@ -1,0 +1,28 @@
+body {
+  font-family: monospace;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+Form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+  font-size: 20px;
+}
+input {
+  outline-color: rgb(107, 107, 191);
+  outline-width: 5px;
+  border-radius: 8px;
+  padding: 1em;
+  width: 50%;
+}
+
+::placeholder {
+  font-size: 15px;
+  align-items: center;
+  font-family: monospace;
+}
