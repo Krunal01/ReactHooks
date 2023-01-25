@@ -1,13 +1,22 @@
 // import logo from './logo.svg';
 // import './App.css';
-
+import { useState } from "react";
+import Props from "./Props";
 import UseState from "./UseState";
 
 function App() {
+  const [name, setName] = useState("");
+  const [print, setPrint] = useState(false);
+  function changeText(e) {
+    setName(e.target.value);
+    setPrint(false);
+  }
+
   return (
     <>
-      <h1>hooks in react</h1>
-      <UseState />
+      {print ? <h1>{name}</h1> : null}
+      <input type="text" onChange={changeText} />
+      <button onClick={() => setPrint(true)}>Print Data</button>
     </>
   );
 }
