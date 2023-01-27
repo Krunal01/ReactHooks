@@ -26,3 +26,14 @@ input {
   align-items: center;
   font-family: monospace;
 }
+button {
+  width: 50%;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 15px;
+}
+button:hover {
+  background-color: antiquewhite;
+}
